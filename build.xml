@@ -1,0 +1,79 @@
+<project name="ClienteBCB" basedir="." default="pack">
+
+  <property name="sources.dir" value="${basedir}/sources"/>
+
+  <property name="build.dir" value="${basedir}/build"/>
+
+  <target name="links">
+
+    <exec executable="${basedir}/mkLinks.sh"/>
+
+  </target>
+
+  <fileset dir="lib" id="lib.files" includes="*.jar" excludes="bcb.jar"/>
+
+  <path id="java7.bootclasspath">
+    <pathelement location="/opt/jdk1.7.0_55/jre/lib/rt.jar"/>
+  </path>
+
+  <path id="java8.bootclasspath">
+    <pathelement location="/opt/jdk1.8.0_25/jre/lib/rt.jar"/>
+  </path>
+
+  <target name="compile">
+
+    <mkdir dir="${build.dir}"/>
+
+    <javac srcdir="${sources.dir}"
+           includes="**/*"
+           excludes="Axis2* **/*Test* testes/* CAInstaller*"
+           destdir="${build.dir}"
+           encoding="UTF-8"
+
+           source="1.8" target="1.8" bootclasspathref="java8.bootclasspath"
+
+           debug="yes" optimize="no"
+           fork="yes" verbose="no" listfiles="yes"
+           includeAntRuntime="false">
+
+           <classpath>
+              <fileset refid="lib.files"/>
+           </classpath>
+
+           <compilerarg value="-Xlint" />
+
+    </javac>
+
+  </target>
+
+  <target name="pack" depends="compile">
+
+    <pathconvert pathsep=" " property="dependencies" refid="lib.files">
+      <map from="${basedir}/lib/" to=""/>
+    </pathconvert>
+
+    <jar destfile="lib/bcb.jar" update="false">
+
+      <manifest>
+
+        <attribute name="Main-Class" value="neo.ClienteBCB"/>
+
+        <attribute name="Class-Path" value="${dependencies}"/>
+
+      </manifest>
+
+      <fileset dir="${build.dir}">
+        <include name="neo/*" />
+        <!-- <include name="CAInstaller*" /> -->
+      </fileset>
+
+      <fileset dir="${basedir}">
+        <include name="resources/bcb.wsdl"/>
+        <include name="cfg/*.properties"/>
+      </fileset>
+
+    </jar>
+
+  </target>
+
+</project>
