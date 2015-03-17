@@ -13,7 +13,7 @@ Montagem da API:
 
 Consulta ao BCB:
 
- prompt% ./bcb.sh <código-série> [<data-inicial> [<data-final>]] 
+ prompt% ./bcb.sh código-série data-inicial (opcional) data-final (opcional)
 
 Compilado e testado no Java7 e Java8.
 
