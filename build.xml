@@ -12,14 +12,6 @@
 
   <fileset dir="lib" id="lib.files" includes="*.jar" excludes="bcb.jar"/>
 
-  <path id="java7.bootclasspath">
-    <pathelement location="/opt/jdk1.7.0_55/jre/lib/rt.jar"/>
-  </path>
-
-  <path id="java8.bootclasspath">
-    <pathelement location="/opt/jdk1.8.0_25/jre/lib/rt.jar"/>
-  </path>
-
   <target name="compile">
 
     <mkdir dir="${build.dir}"/>
@@ -29,9 +21,6 @@
            excludes="Axis2* **/*Test* testes/* CAInstaller*"
            destdir="${build.dir}"
            encoding="UTF-8"
-
-           source="1.8" target="1.8" bootclasspathref="java8.bootclasspath"
-
            debug="yes" optimize="no"
            fork="yes" verbose="no" listfiles="yes"
            includeAntRuntime="false">
