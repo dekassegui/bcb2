@@ -1,6 +1,6 @@
 # bcb2
 
-API em Java para consultas ao web service <a href="http://www4.bcb.gov.br/pec/series/port/aviso.asp" title="clique para acessar o Sistema Gerenciador de Séries Temporais no website do Banco Central do Brasil">Sistema Gerenciador de Séries Temporais do Banco Central do Brasil</a> (aka SGS do BCB) via **Apache Axis2** que substitui a API obsoleta *Apache Axis*, cujo ciclo de desenvolvimento foi encerrado pelo fabricante.
+API programada na linguagem/tecnologia Java para consultas ao web service <a href="http://www4.bcb.gov.br/pec/series/port/aviso.asp" title="clique para acessar o Sistema Gerenciador de Séries Temporais no website do Banco Central do Brasil">Sistema Gerenciador de Séries Temporais do Banco Central do Brasil</a> (aka SGS do BCB) via **Apache Axis2** que substitui a API obsoleta *Apache Axis*.
 
 ### Dependências
 
