@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-Ant-Version: Apache Ant 1.9.4
-Created-By: 1.8.0_20-b26 (Oracle Corporation)
-Main-Class: neo.ClienteBCB
-Class-Path: XmlSchema.jar activation.jar axiom-api.jar axiom-impl.jar 
- axis2-adb.jar axis2-kernel.jar axis2-transport-http.jar axis2-transpo
- rt-local.jar commons-codec.jar commons-httpclient.jar commons-logging
- .jar httpcore.jar log4j.jar mail.jar neethi.jar wsdl4j.jar
-
