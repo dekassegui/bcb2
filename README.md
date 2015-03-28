@@ -17,7 +17,7 @@ API programada na linguagem/tecnologia Java para consultas ao web service <a hre
 
 <ol>
 <li><a href="http://axis.apache.org/axis2/java/core/" title="clique para acessar o website do Apache Axis2">Apache Axis2</a></li>
-<li><a href="https://ant.apache.org/" title="clique para acessar o website do Apache ANT">Apache ANT</a> <strong>opcional</strong> para montagem da API</li>
+<li><a href="https://ant.apache.org/" title="clique para acessar o website do Apache ANT">Apache ANT</a> <em><strong>opcional</strong></em> para montagem da API, também disponível nos repositórios Linux.</li>
 </ol>
 
 ### Montagem da API
@@ -32,5 +32,21 @@ ou alternativamente, sem uso do Apache ANT, execute o comando:
 
 ### Consulta ao SGS do BCB (*via linha de comando*)
 
+##### Consulta propriamente dita, tal que argumentos entre parenteses são opcionais:
+
    <code>prompt% <strong>./bcb.sh</strong> código-da-série-temporal {data-inicial {data-final}}</code>
+
+##### Exemplos de consultas:
+
+(1) Imprime **help** do scritp de consulta
+
+   <code>prompt% <strong>./bcb.sh</strong></code>
+
+(2) Informação sobre a série de código 001 (<em>Dollar Americano</em>)
+
+   <code>prompt% <strong>./bcb.sh</strong> 001</code>
+
+(3) Consulta série do Dollar Americano de 01/03/2015 a 28/03/2015
+
+   <code>prompt% <strong>./bcb.sh</strong> 001 01/03/2015 28/03/2015</code>
 
