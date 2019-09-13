@@ -20,6 +20,10 @@ API programada na linguagem/tecnologia Java para consultas ao web service <a hre
 <li><a href="https://ant.apache.org/" title="clique para acessar o website do Apache ANT">Apache ANT</a> <em><strong>opcional</strong></em> para montagem da API, também disponível nos repositórios Linux.</li>
 </ol>
 
+**Nota:** Use **Axis2 1.6.2** disponível em <a href="http://archive.apache.org/dist/axis/axis2/java/core/1.6.2/" title="arquivo do Axis2 1.6.2 no repositório do Apache/Axis">index of dist/axis/axis2/java/core/1.6.2</a> -- *última versão do Axis com RPC*.
+
+**Dica:** <a href="https://linuxize.com/post/install-java-on-debian-10/" title="">How to Install Java on Debian 10 Linux > Installing OpenJDK 8</a>
+
 ### Montagem da API
 
 Instale o **Axis2** no diretório **/opt** ou modifique o arquivo <a href="https://github.com/dekassegui/bcb2/blob/master/mkLinks.sh" title="clique para acessar o script para criação/preenchimento do diretório das libraries desse projeto">mkLinks.sh</a> e então execute o comando:
